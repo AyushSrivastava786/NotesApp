@@ -1,0 +1,257 @@
+
+*{
+    /* so that the text does not overflow from text area and we have used * so that it applies to every item  */
+    box-sizing: border-box;
+}
+body{
+    /* because initially it has some margin */
+    margin: 0px;
+
+    /* to apply font style to all elements inside body */
+    font-family: sans-serif;
+}
+
+.modal_box
+{
+    /* default width is full width whereas height is of element inside  */
+    height: 20rem;
+    width: 35rem;
+    /* positions are of various types like absolute, fixed,sticky,static ,relative,etc study them from mdn  */
+    position: fixed;
+
+    /* we are doing this to center it because at 50% height the modal's tip will be there but we have to keep its mid-point there so we are subtracting modal's half height and width from 50%  */
+    top: calc(50% - 10rem) ;
+    left: calc(50% - 17.5rem);
+   
+    /* this sets the bg color  */
+    background-color: black;
+    
+     /* now this is for flex-box , we apply it to the parent to get its children in a stacked or line by line position  */
+    display: flex;
+    /* flex-direction: column; */
+    /* width: 250px; */
+    background: #eee;
+
+    /* now this was googled instantly and is used to give shadows to the element */
+  box-shadow: -12px 29px 909px 2px 
+  /* text-align: center; */
+    
+}
+.left_modal_box
+{
+    height: 100%;
+    width: 75%;
+    background-color: white;
+
+    /* padding is just pushing inwards */
+    padding: 2rem;
+    /* box-sizing: border-box; */
+}
+.right_modal_box
+{
+    height: 100%;
+    width: 25%;
+    background-color: rgb(61, 61, 61);
+    display: flex;
+    /* all the below contents will work only if display: flex is activated  */
+
+    /* this will arrange line by line  */
+    flex-direction: column;
+    /* this will bring the flexed items in center  */
+    align-items: center;
+    /* this will evenly separate the elements  */
+    justify-content: space-evenly;
+}
+.header-container
+{
+    height:4.2rem;
+    background-color:rgb(61, 61, 61);
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10rem;
+}
+.header-container>*  
+/* this >* says apply to all its elements */
+{
+    background-color: #000000;
+    height: 70%;
+
+   /* this rounds the corner */
+    border-radius: 10px;
+}
+.main-container
+{
+    /* we are doing this because main container is the parent of all inner elements so its height should be relative of the screen's height  */
+    height: calc(100vh - 4.2rem);
+    background-color: lightgrey;
+    padding: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    align-content: space-around;
+    flex-wrap: wrap;
+   /* now this specifies the gap between the flexed elements */
+    gap:1.2rem;
+    
+   
+}
+
+.color_group_container
+{
+    width: 34%;
+   margin-right: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height:73%;
+    margin-right: 3rem ;
+   
+}
+.cross_container,.lock-unlock_box
+{
+    width: 18%;
+    display: flex;
+    margin-right: 3rem;
+
+}
+.cross_container>*,.lock-unlock_box>*{
+    width: 50%;
+}
+.add_box,.mul_box,.lock_box,.unlock_box{
+    /* background-color:whitesmoke; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.fas
+{
+    font-size: 2rem;
+    color: rgb(61, 61, 61) ;
+    /* font-weight:400; */
+}
+.color
+{
+  height:60%;
+  width:12%;
+  border-radius: 8px;
+}
+.pink
+{
+    background-color: pink;
+}
+.blue
+{
+    background-color: blue;
+}
+.green
+{
+background-color: green;
+}
+.red
+{
+  background-color: red;
+}
+.inputText
+{
+    color: burlywood;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    height: 100%;
+    width: 100%;
+    font-weight:700;
+    outline: none;
+    border:none;
+
+}
+
+.task_container
+{
+    /* border: 1px solid black; */
+    height: 10rem;
+    width: 15rem;
+    background-color: whitesmoke;
+    /* margin: 0rem; */
+    /* padding: 0rem;  */
+}
+.task_main{
+    padding: 0.5rem;
+    height: 9rem;
+
+}
+.task_header
+{
+    /* background-color: black; */
+    height: 0.5rem;
+}
+.id
+{
+    height: 20%;
+    padding:0rem;
+    margin: 0rem;
+    /* gives color to the text */
+    color: grey;
+    margin-left: 0px;
+    padding-bottom: 0.5rem;
+}
+.text
+{
+    height: 80%;
+    padding: 1px;
+    padding-left: 0px;
+    color: burlywood;
+    font-weight: 700;
+    /* overflow property is for enabling scrolling, it works only if the parent has some height */
+    overflow: auto;
+}
+.text::-webkit-scrollbar {
+    display: none;
+  }
+.active
+{
+    background-color:rgb(25, 25, 25);
+}
+
+.color_right
+{
+    height: 10%;
+    width: 35%;
+    border-radius: 8px;
+
+    
+}
+.select
+{
+    border:0.2rem solid black;
+
+}
+
+.blur
+{
+    /* this was copied from google */
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
+}
+
+.shadow
+{
+    background: #eee;
+    /* this again gives the shadow */
+    box-shadow: -12px 29px 909px 2px 
+}
+.butt_border
+{
+    border: 0.2rem solid burlywood;
+}
+
+/* to make it resposive */
+@media only screen and (max-width: 600px) {
+    html {
+      font-size: 5px;
+    }
+  }
